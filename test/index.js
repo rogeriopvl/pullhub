@@ -1,5 +1,5 @@
 const test = require('tape')
-const mockery = require('mockery')
+const proxyquire = require('proxyquire')
 const issuesMock = require('./fixtures/issues.json')
 
 const prMock = function (repoUser, repoName) {
@@ -9,10 +9,7 @@ const prMock = function (repoUser, repoName) {
   return Promise.resolve(issuesMock)
 }
 
-mockery.enable({ warnOnUnregistered: false })
-mockery.registerMock('./lib/pr', prMock)
-
-const getAllPullRequests = require('../')
+const getAllPullRequests = proxyquire('../', { './lib/pr': prMock })
 
 test('module exports a function', (t) => {
   t.equal(typeof getAllPullRequests, 'function')
