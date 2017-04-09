@@ -1,10 +1,13 @@
 {
-  "name": "pr-police",
+  "name": "pullhub",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "tape test/*.js | faucet"
+  },
+  "bin": {
+    "pullhub": "./bin/pullhub"
   },
   "author": "rogeriopvl",
   "license": "MIT",

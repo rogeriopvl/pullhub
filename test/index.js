@@ -9,10 +9,10 @@ const prMock = function (repoUser, repoName) {
   return Promise.resolve(issuesMock)
 }
 
-const getAllPullRequests = proxyquire('../', { './lib/pr': prMock })
+const pullhub = proxyquire('../', { './lib/pr': prMock })
 
 test('module exports a function', (t) => {
-  t.equal(typeof getAllPullRequests, 'function')
+  t.equal(typeof pullhub, 'function')
   t.end()
 })
 
@@ -23,7 +23,7 @@ test('when using promises', (t) => {
     const repos = ['johndoe/somerepo']
     const labels = 'needs review, review'
 
-    getAllPullRequests(repos, labels)
+    pullhub(repos, labels)
       .then((issues) => {
         assert.deepEquals(issues, issuesMock)
       })
@@ -35,7 +35,7 @@ test('when using promises', (t) => {
     const repos = ['johndoe']
     const labels = 'needs review, review'
 
-    getAllPullRequests(repos, labels)
+    pullhub(repos, labels)
       .catch((err) => {
         assert.deepEquals(err, new Error('invalid user'))
       })
@@ -49,7 +49,7 @@ test('when using callbacks', (t) => {
     const repos = ['johndoe/somerepo']
     const labels = 'needs review, review'
 
-    getAllPullRequests(repos, labels, (err, issues) => {
+    pullhub(repos, labels, (err, issues) => {
       assert.deepEquals(issues, issuesMock)
       assert.end(err)
     })
@@ -61,7 +61,7 @@ test('when using callbacks', (t) => {
     const repos = ['johndoe']
     const labels = 'needs review, review'
 
-    getAllPullRequests(repos, labels, (err, issues) => {
+    pullhub(repos, labels, (err, issues) => {
       assert.deepEquals(err, new Error('invalid user'))
       assert.notOk(issues)
     })
