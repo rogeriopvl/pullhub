@@ -1,4 +1,4 @@
-# pullhub
+# pullhub [![Build Status](https://travis-ci.org/rogeriopvl/pullhub.svg?branch=master)](https://travis-ci.org/rogeriopvl/pullhub)
 
 ## Install
 
