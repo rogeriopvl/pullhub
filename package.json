@@ -1,7 +1,7 @@
 {
   "name": "pullhub",
   "version": "1.0.0",
-  "description": "",
+  "description": "Get pull requests from one or more repos filtered by labels",
   "main": "index.js",
   "scripts": {
     "test": "tape test/*.js | faucet"
