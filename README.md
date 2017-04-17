@@ -4,9 +4,48 @@
 
     npm install --save pullhub
 
+## Authentication
+
+Pullhub authenticates the user via a github token. To get your token visit this [github help page](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/).
+
+For public repos the token is optional but recommended. Private repos need token to enable access.
+
+You can set the token in your shell enviroment, just add to your `.bashrc`, `.zshrc` etc. the following line:
+
+    export GH_TOKEN=mypersonaltoken
+
+This will work for both cli and lib usage.
+
 ## Cli usage
 
-Soon...
+```shell
+pullhub <repos> [--labels] [--version] [--help]
+
+  repos      comma separated repos in the user/repo format
+  --labels   comma separated labels to filter PRs by
+  --version  show version info
+  --help     show this usage info
+```
+
+### Examples
+
+- Get all open pull requests from two repos
+
+```shell
+pullhub user/repo1 user/repo2
+```
+
+- Get all open pull requests labeled "needs review" from two repos
+
+```shell
+pullhub user/repo1 user/repo2 --labels "needs review"
+```
+
+- Get all open pull requests labeled "in progress" and "reviewed" from one repo
+
+```shell
+pullhub user/repo1 --labels "in progress,reviewed"
+```
 
 ## Lib usage
 
