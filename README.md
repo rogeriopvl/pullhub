@@ -21,7 +21,7 @@ This will work for both cli and lib usage.
 ```shell
 pullhub <repos> [--labels] [--version] [--help]
 
-  repos      comma separated repos in the user/repo format
+  repos      space separated repos in the user/repo format
   --labels   comma separated labels to filter PRs by
   --version  show version info
   --help     show this usage info
