@@ -3,12 +3,22 @@
   "version": "1.0.1",
   "description": "Get pull requests from one or more repos filtered by labels",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rogeriopvl/pullhub.git"
+  },
   "scripts": {
     "test": "tape test/*.js | faucet"
   },
   "bin": {
     "pullhub": "./bin/pullhub"
   },
+  "keywords": [
+    "pull",
+    "requests",
+    "github",
+    "labels"
+  ],
   "author": "rogeriopvl",
   "license": "MIT",
   "dependencies": {
@@ -21,5 +31,8 @@
     "proxyquire": "^1.7.11",
     "sinon": "^2.1.0",
     "tape": "^4.6.3"
+  },
+  "engines": {
+    "node": ">= 6"
   }
 }

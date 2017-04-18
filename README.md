@@ -1,5 +1,9 @@
 # pullhub [![Build Status](https://travis-ci.org/rogeriopvl/pullhub.svg?branch=master)](https://travis-ci.org/rogeriopvl/pullhub)
 
+## About
+
+Pullhub is a cli and lib tool that lists all pull requests from one or more repos. It supports filtering by label.
+
 ## Install
 
     npm install --save pullhub
