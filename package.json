@@ -30,7 +30,7 @@
     "concat-stream": "^1.6.0",
     "faucet": "0.0.1",
     "proxyquire": "^1.7.11",
-    "sinon": "^3.0.0",
+    "sinon": "^4.0.0",
     "tape": "^4.6.3"
   },
   "engines": {
