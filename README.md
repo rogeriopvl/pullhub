@@ -27,10 +27,11 @@ This will work for both cli and lib usage.
 ```shell
 pullhub <repos> [--labels] [--version] [--help]
 
-  repos      space separated repos in the user/repo format
-  --labels   comma separated labels to filter PRs by
-  --version  show version info
-  --help     show this usage info
+  <repos>            space separated repos in the user/repo format
+  --user <username>  search all repos for given username
+  --labels           comma separated labels to filter PRs by
+  --version          show version info
+  --help             show this usage info
 ```
 
 ### Examples
@@ -51,6 +52,12 @@ pullhub user/repo1 user/repo2 --labels "needs review"
 
 ```shell
 pullhub user/repo1 --labels "in progress,reviewed"
+```
+
+- Get all open pull requests from all the repos of a user
+
+```shell
+pullhub --user rogeriopvl
 ```
 
 ## Lib usage

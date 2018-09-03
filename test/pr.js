@@ -2,15 +2,16 @@ const test = require('tape')
 const proxyquire = require('proxyquire')
 const issuesMock = require('./fixtures/issues.json')
 
-const GithubMock = function GithubMock () {}
-GithubMock.prototype.getIssues = function () {
-  return { listIssues: function () {
-    return Promise.resolve({ data: issuesMock })
-  }}
+const GithubMock = {
+  getIssues: function () {
+    return { listIssues: function () {
+      return Promise.resolve({ data: issuesMock })
+    }}
+  }
 }
 
 const getPullRequests = proxyquire('../lib/pr', {
-  'github-api': GithubMock
+  './github': GithubMock
 })
 
 test('exports function', (t) => {
