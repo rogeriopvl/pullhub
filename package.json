@@ -27,7 +27,7 @@
     "minimist": "^1.2.0"
   },
   "devDependencies": {
-    "concat-stream": "^1.6.2",
+    "concat-stream": "^2.0.0",
     "faucet": "0.0.1",
     "proxyquire": "^1.7.11",
     "sinon": "^4.0.0",
