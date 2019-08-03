@@ -22,7 +22,7 @@
   "author": "rogeriopvl",
   "license": "MIT",
   "dependencies": {
-    "github-api": "^3.0.0",
+    "github-api": "^3.2.2",
     "lodash.flatten": "^4.4.0",
     "minimist": "^1.2.0"
   },
