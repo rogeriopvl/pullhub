@@ -1,7 +1,5 @@
 # pullhub [![Build Status](https://travis-ci.org/rogeriopvl/pullhub.svg?branch=master)](https://travis-ci.org/rogeriopvl/pullhub)
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/rogeriopvl/pullhub.svg)](https://greenkeeper.io/)
-
 ## About
 
 Pullhub is a cli and lib tool that lists all pull requests from one or more repos. It supports filtering by label.
